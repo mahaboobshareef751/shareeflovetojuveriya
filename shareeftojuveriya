@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareef & Juveriya - Our Love Story</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            overflow-x: hidden;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: fixed;
+            font-size: 24px;
+            color: #ff3d58;
+            opacity: 0;
+            animation: floatHeart 8s ease-in infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Slides Container */
+        .slides-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            padding: 40px;
+        }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Common slide content styling */
+        .content {
+            text-align: center;
+            max-width: 900px;
+            animation: fadeInScale 2s ease-in;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Slide 1 - Names with Hearts - Enhanced */
+        .slide-1 {
+            background: radial-gradient(circle at center, rgba(255, 61, 88, 0.2), transparent 70%);
+        }
+
+        .slide-1 .name-shareef {
+            font-size: 90px;
+            background: linear-gradient(45deg, #ff3d58, #ff6b81, #ff8fa3, #ff3d58);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: gradientShift 3s ease infinite, slideInLeft 1.5s ease;
+            text-shadow: 0 0 40px rgba(255, 61, 88, 0.5);
+            filter: drop-shadow(0 0 20px rgba(255, 61, 88, 0.4));
+        }
+
+        .slide-1 .name-juveriya {
+            font-size: 90px;
+            background: linear-gradient(45deg, #00a6ff, #00d4ff, #64e3ff, #00a6ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: gradientShift 3s ease infinite 1s, slideInRight 1.5s ease;
+            text-shadow: 0 0 40px rgba(0, 166, 255, 0.5);
+            filter: drop-shadow(0 0 20px rgba(0, 166, 255, 0.4));
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        .slide-1 .and-symbol {
+            font-size: 70px;
+            margin: 20px;
+            display: inline-block;
+            animation: rotate360 4s linear infinite, scaleUp 1.5s ease 0.5s;
+            filter: drop-shadow(0 0 20px rgba(255, 182, 193, 0.8));
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0) rotate(0deg);
+            }
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+
+        .slide-1 .big-heart {
+            font-size: 120px;
+            margin: 30px 0;
+            animation: heartbeat 1.5s ease-in-out infinite, popIn 1s ease 1s;
+            filter: drop-shadow(0 0 30px rgba(255, 61, 88, 0.8));
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .slide-1 .sparkles {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .slide-1 .sparkle {
+            font-size: 40px;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .slide-1 .sparkle:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slide-1 .sparkle:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .slide-1 .sparkle:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .slide-1 .sparkle:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .slide-1 .sparkle:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.5) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        .slide-1 .love-subtitle {
+            font-size: 32px;
+            color: #fff;
+            margin-top: 20px;
+            animation: fadeInUp 2s ease 1.5s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes rotate360 {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Slide 2 - Love Message */
+        .slide-2 .quote {
+            font-size: 36px;
+            color: #fff;
+            font-style: italic;
+            line-height: 1.8;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .hearts-decoration {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .hearts-decoration span {
+            display: inline-block;
+            animation: bounceHeart 2s ease-in-out infinite;
+            color: #ff3d58;
+        }
+
+        .hearts-decoration span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hearts-decoration span:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes bounceHeart {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Slide 3 - Hafiz Honor */
+        .slide-3 h2 {
+            font-size: 56px;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(0, 166, 255, 0.5);
+        }
+
+        .slide-3 .honor-icon {
+            font-size: 100px;
+            margin: 20px 0;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+            }
+            50% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.8));
+            }
+        }
+
+        .slide-3 .message {
+            font-size: 32px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .slide-3 .highlight {
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Slide 4 - Why I Love You */
+        .slide-4 h2 {
+            font-size: 52px;
+            color: #fff;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #ff3d58, #00a6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .reason-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            animation: slideInUp 1s ease-in;
+            transition: all 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 61, 88, 0.3);
+            border-color: #ff3d58;
+        }
+
+        .reason-card:nth-child(2) { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+        .reason-card:nth-child(3) { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; }
+        .reason-card:nth-child(4) { animation-delay: 0.6s; opacity: 0; animation-fill-mode: forwards; }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reason-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .reason-title {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .reason-text {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* Slide 5 - Blessed & Grateful */
+        .slide-5 h2 {
+            font-size: 56px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .slide-5 .blessing-icon {
+            font-size: 80px;
+            margin: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .slide-5 .blessing-icon:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .slide-5 .blessing-icon:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .slide-5 .gratitude-text {
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin: 30px 0;
+            padding: 0 40px;
+        }
+
+        /* Slide 6 - Clock */
+        .clock-container {
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .clock {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 3px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                0 0 30px rgba(0, 0, 0, 0.9),
+                inset 0 0 30px rgba(255, 255, 255, 0.05),
+                0 0 60px rgba(255, 61, 88, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+            animation: glowPink 3s ease-in-out infinite;
+        }
+
+        @keyframes glowPink {
+            0%, 100% {
+                box-shadow: 
+                    0 0 30px rgba(0, 0, 0, 0.9),
+                    inset 0 0 30px rgba(255, 255, 255, 0.05),
+                    0 0 40px rgba(255, 61, 88, 0.3);
+            }
+            50% {
+                box-shadow: 
+                    0 0 30px rgba(0, 0, 0, 0.9),
+                    inset 0 0 30px rgba(255, 255, 255, 0.05),
+                    0 0 80px rgba(255, 61, 88, 0.6);
+            }
+        }
+
+        .names-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .clock h3 {
+            font-size: 32px;
+            background: linear-gradient(135deg, #ff3d58, #ff6b81);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            animation: titlePulse 2s ease-in-out infinite;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .clock h4 {
+            font-size: 32px;
+            background: linear-gradient(135deg, #00a6ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            animation: titlePulse 2s ease-in-out infinite 0.5s;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .clock span {
+            position: absolute;
+            transform: rotate(calc(30deg * var(--i)));
+            inset: 12px;
+            text-align: center;
+        }
+
+        .clock span b {
+            transform: rotate(calc(-30deg * var(--i)));
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .clock span b:hover {
+            color: #ff3d58;
+            transform: rotate(calc(-30deg * var(--i))) scale(1.3);
+            text-shadow: 0 0 20px rgba(255, 61, 88, 0.8);
+        }
+
+        .clock::before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff, #ff3d58);
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(255, 61, 88, 0.8);
+            animation: centerPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes centerPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(255, 61, 88, 0.8);
+            }
+            50% {
+                transform: scale(1.3);
+                box-shadow: 0 0 30px rgba(255, 61, 88, 1);
+            }
+        }
+
+        .hand {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            transform-origin: center;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 0 5px var(--clr));
+        }
+
+        .hand i {
+            position: absolute;
+            background: linear-gradient(180deg, var(--clr), rgba(255, 255, 255, 0.5));
+            width: 4px;
+            height: var(--h);
+            border-radius: 8px;
+        }
+
+        #hour i { width: 6px; }
+        #min i { width: 5px; }
+        #sec i { width: 3px; }
+
+        .digital-time {
+            position: absolute;
+            bottom: -80px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 0 10px rgba(255, 61, 88, 0.5);
+        }
+
+        .date-display {
+            position: absolute;
+            bottom: -120px;
+            text-align: center;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+        }
+
+        /* Slide 7 - Journey Stats */
+        .slide-7 h2 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            animation: slideInUp 1s ease-in;
+        }
+
+        .stat-item:nth-child(2) { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+        .stat-item:nth-child(3) { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; }
+
+        .stat-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .stat-item:nth-child(2) .stat-icon {
+            animation-delay: 1s;
+        }
+
+        .stat-item:nth-child(3) .stat-icon {
+            animation-delay: 2s;
+        }
+
+        .stat-value {
+            font-size: 42px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff3d58, #00a6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Slide 8 - Forever Promise */
+        .slide-8 h2 {
+            font-size: 60px;
+            background: linear-gradient(135deg, #ff3d58, #ffd700, #00a6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .slide-8 .promise-icon {
+            font-size: 120px;
+            margin: 30px 0;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        .slide-8 .promise-text {
+            font-size: 34px;
+            color: #fff;
+            line-height: 1.8;
+            font-weight: 300;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Navigation Dots */
+        .dots-navigation {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .dot.active {
+            background: #ff3d58;
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(255, 61, 88, 0.8);
+        }
+
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts -->
+    <script>
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 8000);
+        }, 800);
+    </script>
+
+    <div class="slides-container">
+        <!-- Slide 1: Names with Hearts - Enhanced -->
+        <div class="slide active">
+            <div class="slide-1">
+                <div class="content">
+                    <h1 class="name-shareef">Shareef</h1>
+                    <div class="and-symbol">💕</div>
+                    <h2 class="name-juveriya">Juveriya</h2>
+                    <div class="big-heart">❤️</div>
+                    <div class="sparkles">
+                        <span class="sparkle">✨</span>
+                        <span class="sparkle">💖</span>
+                        <span class="sparkle">⭐</span>
+                        <span class="sparkle">💝</span>
+                        <span class="sparkle">✨</span>
+                    </div>
+                    <div class="love-subtitle">Forever in Love 💑</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Love Message -->
+        <div class="slide">
+            <div class="content">
+                <div class="hearts-decoration">
+                    <span>💖</span>
+                    <span>💝</span>
+                    <span>💗</span>
+                </div>
+                <p class="quote">"My dearest Juveriya, every moment with you is a treasure. You are my dream come true, my everything. I love you more than words can express. ❤️"</p>
+                <div class="hearts-decoration">
+                    <span>💗</span>
+                    <span>💝</span>
+                    <span>💖</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Hafiz Honor -->
+        <div class="slide">
+            <div class="slide-3">
+                <div class="content">
+                    <h2>My Precious Hafiza 📿</h2>
+                    <div class="honor-icon">🌟</div>
+                    <p class="message">
+                        I am blessed beyond measure to have married a <span class="highlight">Hafiza of the Holy Quran</span>. 
+                        Your dedication, your beautiful recitation, and your devotion to Allah fill my heart with immense pride and joy.
+                    </p>
+                    <p class="message">
+                        You are not just my wife, but my <span class="highlight">inspiration</span> and my guide to a better life. 
+                        May Allah continue to bless you and honor your success. 🤲✨
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Why I Love You -->
+        <div class="slide">
+            <div class="slide-4">
+                <div class="content">
+                    <h2>Why I Love You ❤️</h2>
+                    <div class="reasons-grid">
+                        <div class="reason-card">
+                            <div class="reason-icon">📖</div>
+                            <div class="reason-title">Your Faith</div>
+                            <div class="reason-text">Your devotion to Islam and memorization of the Quran inspires me every day</div>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">🌸</div>
+                            <div class="reason-title">Your Character</div>
+                            <div class="reason-text">Your kindness, patience, and beautiful soul make you perfect in every way</div>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">💫</div>
+                            <div class="reason-title">Your Smile</div>
+                            <div class="reason-text">Your smile lights up my world and brings joy to my heart</div>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">🤝</div>
+                            <div class="reason-title">Your Support</div>
+                            <div class="reason-text">You stand by me, support me, and make me a better person</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Blessed & Grateful -->
+        <div class="slide">
+            <div class="slide-5">
+                <div class="content">
+                    <h2>Alhamdulillah 🤲</h2>
+                    <div>
+                        <span class="blessing-icon">🌙</span>
+                        <span class="blessing-icon">⭐</span>
+                        <span class="blessing-icon">✨</span>
+                    </div>
+                    <p class="gratitude-text">
+                        Every day I thank Allah for blessing me with you. You are my greatest blessing, my answered prayer, and my gift from the Almighty.
+                    </p>
+                    <p class="gratitude-text">
+                        Your success in becoming a Hafiza is an honor to our family. I am so proud to be your husband. 💚
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Clock -->
+        <div class="slide">
+            <div class="content">
+                <div class="clock-container">
+                    <div class="clock">
+                        <div class="names-container">
+                            <h3>Shareef</h3>
+                            <h4>Juveriya</h4>
+                        </div>
+                        <div style="--clr: #ff3d58; --h: 80px" id="hour" class="hand">
+                            <i></i>
+                        </div>
+                        <div style="--clr: #00a6ff; --h: 90px" id="min" class="hand">
+                            <i></i>
+                        </div>
+                        <div style="--clr: #ffffff; --h: 100px" id="sec" class="hand">
+                            <i></i>
+                        </div>
+
+                        <span style="--i: 1"><b>1</b></span>
+                        <span style="--i: 2"><b>2</b></span>
+                        <span style="--i: 3"><b>3</b></span>
+                        <span style="--i: 4"><b>4</b></span>
+                        <span style="--i: 5"><b>5</b></span>
+                        <span style="--i: 6"><b>6</b></span>
+                        <span style="--i: 7"><b>7</b></span>
+                        <span style="--i: 8"><b>8</b></span>
+                        <span style="--i: 9"><b>9</b></span>
+                        <span style="--i: 10"><b>10</b></span>
+                        <span style="--i: 11"><b>11</b></span>
+                        <span style="--i: 12"><b>12</b></span>
+                    </div>
+                    <div class="digital-time" id="digitalTime">00:00:00</div>
+                    <div class="date-display" id="dateDisplay"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Journey Stats -->
+        <div class="slide">
+            <div class="slide-7">
+                <div class="content">
+                    <h2>Our Journey Together 💑</h2>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-icon">💍</div>
+                            <div class="stat-value" id="daysCounter">0</div>
+                            <div class="stat-label">Days Since "I Do"</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">💝</div>
+                            <div class="stat-value">∞</div>
+                            <div class="stat-label">Love & Happiness</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">💫</div>
+                            <div class="stat-value">∞</div>
+                            <div class="stat-label">Forever Together</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Forever Promise -->
+        <div class="slide">
+            <div class="slide-8">
+                <div class="content">
+                    <h2>Forever & Always</h2>
+                    <div class="promise-icon">💑</div>
+                    <p class="promise-text">
+                        I promise to love you, cherish you, and stand by you through every moment of our lives. 
+                        You are my partner, my best friend, and the love of my life.
+                    </p>
+                    <div class="promise-icon">💕</div>
+                    <p class="promise-text">
+                        Together, forever. Insha'Allah. 🤲
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="dots-navigation">
+        <div class="dot active" data-slide="0"></div>
+        <div class="dot" data-slide="1"></div>
+        <div class="dot" data-slide="2"></div>
+        <div class="dot" data-slide="3"></div>
+        <div class="dot" data-slide="4"></div>
+        <div class="dot" data-slide="5"></div>
+        <div class="dot" data-slide="6"></div>
+        <div class="dot" data-slide="7"></div>
+    </div>
+
+    <script>
+        // Clock functionality
+        let hr = document.getElementById('hour');
+        let min = document.getElementById('min');
+        let sec = document.getElementById('sec');
+        let digitalTime = document.getElementById('digitalTime');
+        let dateDisplay = document.getElementById('dateDisplay');
+
+        function displayTime() {
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+
+            let hRotation = 30 * hh + mm / 2;
+            let mRotation = 6 * mm;
+            let sRotation = 6 * ss;
+
+            hr.style.transform = `rotate(${hRotation}deg)`;
+            min.style.transform = `rotate(${mRotation}deg)`;
+            sec.style.transform = `rotate(${sRotation}deg)`;
+
+            let hours = hh.toString().padStart(2, '0');
+            let minutes = mm.toString().padStart(2, '0');
+            let seconds = ss.toString().padStart(2, '0');
+            digitalTime.textContent = `${hours}:${minutes}:${seconds}`;
+
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            dateDisplay.textContent = `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+        }
+
+        setInterval(displayTime, 1000);
+        displayTime();
+
+        // Days counter - Wedding date: October 10, 2025
+        const weddingDate = new Date('2025-10-10');
+        function updateDaysCounter() {
+            const today = new Date();
+            const diffTime = Math.abs(today - weddingDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById('daysCounter').textContent = diffDays;
+        }
+        updateDaysCounter();
+
+        // Slide navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        // Dot click navigation
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                showSlide(slideIndex);
+            });
+        });
+
+        // Auto-advance slides every 6 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 6000);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            } else if (e.key === 'ArrowLeft') {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+        });
+    </script>
+</body>
+</html>
